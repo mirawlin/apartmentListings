@@ -2,18 +2,28 @@
   "name": "apartmentlistings",
   "version": "1.0.0",
   "type": "module",
+  "engines": {
+    "node": "^20.9.0"
+  },
   "dependencies": {
     "@hapi/accept": "^6.0.3",
     "@hapi/hapi": "^21.3.2",
     "@hapi/inert": "^7.1.0",
-    "@hapi/vision": "^7.0.3"
+    "@hapi/vision": "^7.0.3",
+    "chai": "^4.3.10"
   },
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:watch": "nodemon index.js",
+    "test": "echo \\\"Error: no tests specified\\\" && exit 1"
   },
   "author": "Miranda Lin-Guignard",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "nodemon": "^3.0.1",
+    "sinon": "^17.0.1"
+  }
 }
