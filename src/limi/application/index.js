@@ -3,8 +3,11 @@ const register = async function (server) {
         {
             method: 'GET',
             path: '/',
-            handler: (request, h) => {
-                return 'Hello World!';
+            config: {
+                auth: false,
+                handler: (request, h) => {
+                    return "helloWorld"
+                }
             }
         }
     ]);
