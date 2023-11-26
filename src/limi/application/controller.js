@@ -1,11 +1,10 @@
-import { getApartments as usecases } from '../domain/usecase/get-apartements.js';
+import { getApartments } from '../domain/usecase/get-apartements.js';
 
-const getAllApartments = async function(request, h, dependencies = { usecases }) {
+const getAllApartments = async function(request, h, dependencies = { getApartments }) {
 
-    const blah = await dependencies.usecases.getApartments();
+    const blah = await dependencies.getApartments();
     return blah;
 }
 
-const apartmentController = { getAllApartments }
+export const apartmentController = { getAllApartments }
 
-export { apartmentController }
