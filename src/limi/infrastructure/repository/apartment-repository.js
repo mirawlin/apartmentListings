@@ -1,12 +1,29 @@
 import datasource from '../datasource/apartmentList.json' assert {type: 'json'};
 import {Apartment} from '../../domain/model/apartment.js';
+import {v4 as uuidv4} from 'uuid';
 
-async function getAllApartments() {
+
+const getAllApartments = async function () {
     const apartments = datasource.apartments;
-    return _toDomain(apartments);
+    return toDomain(apartments);
 }
 
-function _toDomain(apartments) {
+const insertApartment = async function (apartment) {
+    let newApartment = new Apartment(
+        {
+            id: uuidv4(),
+            name: apartment.name,
+            description: apartment.description,
+            address: apartment.address,
+            city: apartment.city,
+            postcode: apartment.postcode,
+            energyRating: apartment.energyRating,
+        }
+    )
+    return newApartment;
+}
+
+function toDomain(apartments) {
     return apartments.map(apartment => new Apartment(
         {
             id: apartment.id,
@@ -20,4 +37,4 @@ function _toDomain(apartments) {
     ))
 }
 
-export {getAllApartments}
+export { getAllApartments, insertApartment }

@@ -1,4 +1,4 @@
-import { getApartments } from "../../../../../src/limi/domain/usecase/get-apartements.js";
+import { getApartments } from "../../../../../src/limi/domain/usecase/get-apartments.js";
 import { expect } from 'chai';
 import sinon  from 'sinon';
 

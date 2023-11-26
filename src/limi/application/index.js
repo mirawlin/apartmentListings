@@ -9,6 +9,14 @@ const register = async function (server) {
                 auth: false,
                 handler: apartmentController.getAllApartments
             }
+        },
+        {
+            method: 'POST',
+            path: '/api/apartments',
+            config: {
+                auth: false,
+                handler: apartmentController.addApartment
+            }
         }
     ]);
 };
