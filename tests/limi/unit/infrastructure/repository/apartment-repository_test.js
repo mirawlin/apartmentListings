@@ -1,6 +1,6 @@
-import {getAllApartments} from "../../../../src/limi/infrastructure/repository/apartment-repository.js";
+import {getAllApartments} from "../../../../../src/limi/infrastructure/repository/apartment-repository.js";
 import { expect } from 'chai';
-import {Apartment} from "../../../../src/limi/domain/model/apartment.js";
+import {Apartment} from "../../../../../src/limi/domain/model/apartment.js";
 
 describe('Unit Test', function () {
     describe('getApartments', function () {

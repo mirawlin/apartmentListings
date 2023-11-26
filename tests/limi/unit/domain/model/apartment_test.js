@@ -1,4 +1,4 @@
-import { Apartment } from '../../../../src/limi/domain/model/apartment.js';
+import { Apartment } from '../../../../../src/limi/domain/model/apartment.js';
 import { expect } from 'chai';
 
 describe('Apartment #constructor', function () {
