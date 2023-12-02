@@ -1,0 +1,22 @@
+{
+  "apartments": [
+    {
+      "id": 1,
+      "name": "sunny apartment",
+      "description": "north facing 2 bedroom apartment, you will love living there. We have a high expertise in this neighborhood",
+      "address": "142 rue de charenton",
+      "city" : "Paris",
+      "postcode": 750012,
+      "energyRating" : "C"
+    },
+    {
+      "id": 2,
+      "name": "parisian chambre de bonne",
+      "description": "small studio in the heart of paris",
+      "address": "123 Rue des Archives",
+      "city" : "Paris",
+      "postcode": 75004,
+      "energyRating" : ""
+    }
+  ]
+}

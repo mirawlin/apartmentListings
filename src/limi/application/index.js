@@ -1,10 +1,21 @@
+import { apartmentController } from './controller.js';
+
 const register = async function (server) {
     server.route([
         {
             method: 'GET',
-            path: '/',
-            handler: (request, h) => {
-                return 'Hello World!';
+            path: '/api/apartments',
+            config: {
+                auth: false,
+                handler: apartmentController.getAllApartments
+            }
+        },
+        {
+            method: 'POST',
+            path: '/api/apartments',
+            config: {
+                auth: false,
+                handler: apartmentController.addApartment
             }
         }
     ]);
