@@ -1,6 +1,6 @@
 import { apartmentController } from './controller.js';
 
-const register = async function (server) {
+const registerRoutes = async function (server) {
     server.route([
         {
             method: 'GET',
@@ -22,4 +22,4 @@ const register = async function (server) {
 };
 
 const name = 'apartments-api';
-export { register, name };
+export { registerRoutes, name };

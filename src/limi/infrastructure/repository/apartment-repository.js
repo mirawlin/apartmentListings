@@ -1,6 +1,7 @@
 import datasource from '../datasource/apartmentList.json' assert {type: 'json'};
 import {Apartment} from '../../domain/model/apartment.js';
 import {v4 as uuidv4} from 'uuid';
+import {aptListingRabbitClient} from "../../../../index.js";
 
 
 const getAllApartments = async function () {
@@ -20,6 +21,8 @@ const insertApartment = async function (apartment) {
             energyRating: apartment.energyRating,
         }
     )
+    console.log(`Inserting apartment ${newApartment.id}`);
+    await aptListingRabbitClient.publishCreateAptListing(newApartment);
     return newApartment;
 }
 

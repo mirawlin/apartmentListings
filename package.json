@@ -11,6 +11,7 @@
     "@hapi/inert": "^7.1.0",
     "@hapi/vision": "^7.0.3",
     "chai": "^4.3.10",
+    "rabbitmq-client": "^4.4.0",
     "uuid": "^9.0.1"
   },
   "main": "index.js",
