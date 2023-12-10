@@ -7,7 +7,7 @@ export class AptListingRabbitClient {
     #apartmentsListingPub;
 
     constructor() {
-        this.rabbit = new Connection('amqp://publisher:guest@localhost:5672');
+        this.rabbit = new Connection('amqp://guest:guest@localhost:5672');
         this.#apartmentsListingPub = this.rabbit.createPublisher({
             confirm: true,
             maxAttempts: 2,
