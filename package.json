@@ -10,6 +10,7 @@
     "@hapi/hapi": "^21.3.2",
     "@hapi/inert": "^7.1.0",
     "@hapi/vision": "^7.0.3",
+    "@pact-foundation/pact": "^12.1.1",
     "chai": "^4.3.10",
     "rabbitmq-client": "^4.4.0",
     "uuid": "^9.0.1"
@@ -18,7 +19,8 @@
   "scripts": {
     "start": "node index.js",
     "start:watch": "nodemon index.js",
-    "test": "echo \\\"Error: no tests specified\\\" && exit 1"
+    "test": "npm run test:pact",
+    "test:pact": "mocha 'tests/**/pact/*pact-test.js'"
   },
   "author": "Miranda Lin-Guignard",
   "license": "ISC",
