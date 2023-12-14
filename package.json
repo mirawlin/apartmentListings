@@ -20,7 +20,8 @@
     "start": "node index.js",
     "start:watch": "nodemon index.js",
     "test": "npm run test:pact",
-    "test:pact": "mocha 'tests/**/pact/*pact-test.js'"
+    "test:pact": "mocha 'tests/**/pact/*pact-test.js'",
+    "pact:canIDeploy": "pact-broker can-i-deploy --pacticipant apartment-listings --broker-base-url http://localhost:9292 --version $(git rev-parse HEAD 2>&1)"
   },
   "author": "Miranda Lin-Guignard",
   "license": "ISC",
