@@ -7,9 +7,9 @@ const createApartmentClient = {
         return new Promise((resolve, reject) => {
             resolve( new Apartment ({
                 id: "fc02a23a-c711-45ab-97c4-00c00c327fd2",
-                name: "Apartment name",
-                description: "large T4",
-                address: "123 rue rivoli",
+                name: "name",
+                description: "description",
+                address: "address",
                 city: "Paris",
                 postcode: 75001,
                 energyRating: "E",

@@ -35,7 +35,7 @@ function toDomain(apartments) {
             address: apartment.address,
             city: apartment.city,
             postcode: apartment.postcode,
-            energyRating: apartment.energyRating,
+            // energyRating: apartment.energyRating,
         }
     ))
 }

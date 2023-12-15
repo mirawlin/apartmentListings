@@ -16,7 +16,7 @@ const addApartment = async function (request, h, dependencies = {createApartment
                 address: newApiApartment.address,
                 city: newApiApartment.city,
                 postcode: newApiApartment.postcode,
-                energyRating: newApiApartment.energyRating
+                // energyRating: newApiApartment.energyRating,
             })
         );
     } catch (e) {
