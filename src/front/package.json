@@ -1,0 +1,46 @@
+{
+  "name": "apartmentlistings",
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": "^20.9.0"
+  },
+  "dependencies": {
+    "@pact-foundation/pact": "^12.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.1",
+    "react-scripts": "^5.0.1"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "start:watch": "nodemon src/index.js",
+    "test": "npm run test:pact",
+    "test:pact": "mocha 'tests/**/pact/*pact-test.js'",
+    "pact:canIDeploy": "pact-broker can-i-deploy --pacticipant apartment-listings --broker-base-url http://localhost:9292 --version $(git rev-parse HEAD 2>&1)"
+  },
+  "author": "Miranda Lin-Guignard",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.8",
+    "@babel/preset-react": "^7.23.3",
+    "mocha": "^10.2.0",
+    "nodemon": "^3.0.1",
+    "sinon": "^17.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
