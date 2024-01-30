@@ -25,7 +25,6 @@ const exec = command =>
 
 describe('Pact Verification', () => {
     describe("Message provider tests", () => {
-        // 2 Pact setup
         const p = new MessageProviderPact({
             messageProviders: {
                 // Name should match the 'expects to receive' in the consumer pact
