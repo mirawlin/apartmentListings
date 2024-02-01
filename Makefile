@@ -35,8 +35,12 @@ test:
 test-unit:
 	mocha 'tests/**/unit/**'
 
-
 .PHONY: test-pact ## Run pact tests
 test-pact:
 	npm run test:pact
+
+.PHONY: docker-build ## build docker image
+docker-build: TAG:=limi-local
+docker-build:
+	docker build -t limi.azurecr.io/aptlistings:${TAG} .
 
