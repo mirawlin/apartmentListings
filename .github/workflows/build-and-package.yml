@@ -22,6 +22,8 @@ jobs:
           node-version: '20.9'
       - name: Install Dependencies
         run: npm ci
+      - name: Install Mocha
+        run: npm install -g mocha
       - name: Run Tests
         run: make test
 
